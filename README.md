@@ -22,11 +22,19 @@ Claude Code icin Turkce profesyonel isletim sistemi. Hafiza, uzman agent'lar, ot
 ### 2. Kurulum
 
 ```bash
+# Repo'yu bilgisayarina indir
 git clone https://github.com/komunite/kalfa-os.git
-cd hedef-projeniz
-cp -r /kalfa-os/yolu/* .
-cp -r /kalfa-os/yolu/.claude .
-cp /kalfa-os/yolu/CLAUDE.md .
+
+# Kendi projenin klasorune gir
+cd /Users/seninkullanicin/projeler/benim-projem
+
+# Kalfa OS dosyalarini buraya kopyala
+cp -r ~/kalfa-os/.claude .
+cp ~/kalfa-os/CLAUDE.md .
+cp ~/kalfa-os/SETUP.md .
+cp ~/kalfa-os/Scratchpad.md .
+cp ~/kalfa-os/"Task Board.md" .
+cp -r ~/kalfa-os/"Daily Notes" .
 ```
 
 ### 3. Baslatma

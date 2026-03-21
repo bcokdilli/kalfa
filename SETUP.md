@@ -36,12 +36,22 @@ irm https://claude.ai/install.ps1 | iex
 ## 2. Repo'yu klonla ve projeye kopyala
 
 ```bash
+# Repo'yu bilgisayarına indir
 git clone https://github.com/komunite/kalfa-os.git
-cp -r kalfa-os/* /projenizin/yolu/
-cp -r kalfa-os/.claude /projenizin/yolu/
+
+# Kendi projenin klasörüne gir
+cd /Users/seninkullanicin/projeler/benim-projem
+
+# Kalfa OS dosyalarını buraya kopyala
+cp -r ~/kalfa-os/.claude .
+cp ~/kalfa-os/CLAUDE.md .
+cp ~/kalfa-os/SETUP.md .
+cp ~/kalfa-os/Scratchpad.md .
+cp ~/kalfa-os/"Task Board.md" .
+cp -r ~/kalfa-os/"Daily Notes" .
 ```
 
-Bu işlem `.claude/` sistem dizinini, `CLAUDE.md`, `Task Board.md`, `Scratchpad.md` ve `Daily Notes/` dosyalarını ekler.
+Bu işlem `.claude/` sistem dizinini ve iş akışı dosyalarını projenize ekler.
 
 Zaten bir `.claude/` dizininiz varsa elle birleştirin — mevcut ayarlarınızı veya hafızanızı üzerine yazmayın.
 
