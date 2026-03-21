@@ -4,6 +4,8 @@ Bu araç, Claude Code ile daha düzenli ve üretim kalitesinde çalışma yapman
 
 Proje durumu: aktif olarak geliştiriliyor
 
+NPM paketi: `https://www.npmjs.com/package/@komunite/kalfa-os`
+
 ### Temel işlevler
 
 Kalfa OS; Claude Code kullanıcıları, bireysel üreticiler ve küçük ekipler için tasarlanmıştır. Amaç, kullanıcıların günlük çalışma akışını standartlaştırmak, kaliteyi korumak ve bağlam kaybını azaltmaktır.
@@ -29,6 +31,49 @@ Sizde bulunması gerekenler:
 * `jq` kurulumu (hook doğrulamaları için)
 * Terminal erişimi olan bir işletim sistemi (macOS, Linux veya Windows)
 * Proje klasöründe dosya yazma yetkisi
+
+## NPM paketi kullanımı
+
+### 1. `npx` ile tek seferlik kullanım (önerilen)
+
+Kalfa OS'u hedef projenize tek komutla kurabilirsiniz:
+
+```bash
+npx @komunite/kalfa-os init
+```
+
+Farklı bir dizine kurmak için:
+
+```bash
+npx @komunite/kalfa-os init --target /proje/dizini
+```
+
+> Not: `--target` ile verdiğiniz dizin mevcut olmalıdır.
+
+Mevcut dosyaların üzerine yazmak için:
+
+```bash
+npx @komunite/kalfa-os init --force
+```
+
+Yalnızca ne yapılacağını görmek için:
+
+```bash
+npx @komunite/kalfa-os init --dry-run
+```
+
+### 2. Global kurulum ile kullanım
+
+```bash
+npm i -g @komunite/kalfa-os
+kalfa-os init
+```
+
+Yardım menüsü:
+
+```bash
+kalfa-os --help
+```
 
 ## Kalfa OS nasıl kullanılır
 
@@ -138,6 +183,31 @@ Testleri çalıştırma:
 1. Markdown kontrollerini çalıştırın.
    1. `npm run lint:md`
    2. Gerekirse `npm run lint:md:fix`
+2. CLI testlerini çalıştırın.
+   1. `npm test`
+   2. Geliştirme sırasında izleme modunda çalıştırmak için `npm run test:watch`
+
+#### Test kapsamı
+
+Mevcut test seti `tests/` dizinindedir ve şunları doğrular:
+
+1. `tests/smoke.test.js`
+   1. Test altyapısının temel olarak çalıştığını doğrular.
+2. `tests/cli.integration.test.js`
+   1. Yardım çıktısını (`--help`) doğrular.
+   2. `help` alias davranışını doğrular.
+   3. Geçersiz hedef dizin için hata davranışını doğrular.
+   4. `init --dry-run` çıktısını doğrular.
+   5. `init` ile temel dosyaların hedef dizine kopyalandığını doğrular.
+
+#### NPM yayını (bakımcılar için)
+
+1. Paket içeriğini önizleyin.
+   1. `npm run pack:preview`
+2. NPM hesabınızı doğrulayın.
+   1. `npm whoami`
+3. Yeni sürümü yayınlayın.
+   1. `npm publish --access public`
 
 #### Hata ayıklama
 
