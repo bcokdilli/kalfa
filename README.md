@@ -6,6 +6,16 @@ Proje durumu: aktif olarak geliştiriliyor
 
 NPM paketi: `https://www.npmjs.com/package/@komunite/kalfa-os`
 
+## Metrikler
+
+| Bileşen | Sayı | Açıklama |
+|---------|------|----------|
+| **Skill'ler** | 989 | 16 kategoride yapılandırılmış operasyonel prosedürler |
+| **Agent'lar** | 9 | Kalıcı hafızaya sahip uzman alt-agent'lar |
+| **Komutlar** | 21 | İş akışı ritüelleri ve araçlar |
+| **Hook'lar** | 9 | Deterministik güvenlik kontrolleri |
+| **Hafıza** | 6 katman | Oturumlar arası bağlam koruma |
+
 ### Temel işlevler
 
 Kalfa OS; Claude Code kullanıcıları, bireysel üreticiler ve küçük ekipler için tasarlanmıştır. Amaç, kullanıcıların günlük çalışma akışını standartlaştırmak, kaliteyi korumak ve bağlam kaybını azaltmaktır.
